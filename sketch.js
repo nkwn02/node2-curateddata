@@ -12,7 +12,7 @@ let babies = []
 
 function preload(){
 
- for (let i = 0; i <= 10; i++){
+ for (let i = 0; i <= 9; i++){
     babies[i] = loadImage(`assets/baby_${i}.jpg`)
  }
 
@@ -39,8 +39,9 @@ function mousePressed() {
   console.log(words);
 
 //image(babies[0], width/2, height/2)
-image(babies[babyrando]), width = 0.5, height = 0.5
+image(babies[babyrando], width*0.42, height*0.3, 100, 130);
 }
+
 
 function intText() {
   fill(255);
