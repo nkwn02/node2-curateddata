@@ -46,6 +46,7 @@ image(babies[babyrando], width*0.42, height*0.3, 100, 130);
 function intText() {
   fill(255);
   textAlign(CENTER);
+  textSize(20);
   text('Click to make your baby', width*0.5, height*0.1);
 }
 
@@ -54,6 +55,7 @@ function statement() {
   intText();
   fill(255);
   textAlign(CENTER);
+  textSize(20);
   text('This is your baby.', width*0.5, height*0.2);
   text(words, width*0.5, height*0.75)
 }
