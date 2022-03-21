@@ -5,3 +5,13 @@ html, body {
 canvas {
   display: block;
 }
+
+.factButton {
+  padding: 30px;
+  font-size: 15px;
+  font-family: myFont;
+  background-color: #382e1d
+
+
+
+}
