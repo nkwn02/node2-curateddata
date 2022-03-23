@@ -11,65 +11,6 @@ let words;
 
 let landmarks = []
 
-//var arr = [];
-
-//arr = [
-   //{
-  //   pic: landmark_0.jpg,
-    // phrase: 'The Painted Ladies',
-//   },
-//   {
-//     pic: landmark_1.jpg,
-//     phrase: 'Chinatown',
-  // },
-   //{
-     //pic: landmark_2.jpg,
-     //phrase: 'Golden Gate Park',
-  // },
-//   {
-  //   pic: landmark_3.jpg,
-    // phrase: 'The Conservatory of Flowers',
-//   },
-  // {
-    // pic: landmark_4.jpg,
-    // phrase: 'The Ferry Building',
-  // },
-  // {
-    // pic: landmark_5.jpg,
-     //phrase: 'The Palace of Fine Arts',
-  // },
-   //{
-     //pic: landmark_6.jpg,
-     //phrase: 'The Castro',
-  // },
-   //{
-     //pic: landmark_7.jpg,
-     //phrase: 'Pier 39',
-  // },
-   //{
-     //pic: landmark_8.jpg,
-    // phrase: 'Dolores Park',
-  // },
-   //{
-     //pic: landmark_9.jpg,
-    // phrase: 'The Golden Gate Bridge',
-  // },
-  // {
-    // pic: landmark_10.jpg,
-    // phrase: 'Coit Tower',
-  // },
-  // {
-    // pic: landmark_11.jpg,
-    // phrase: 'Downtown',
-  // },
-  // {
-    // pic: landmark_12.jpg,
-    // phrase: 'Alcatraz',
-//   },
-//];
-
-
-
 let button;
 let cnv;
 
@@ -90,7 +31,7 @@ myFont = loadFont('assets/Foglihten-Regular.otf')
 function setup() {
 cnv = createCanvas(800, 600);
 cnv.parent('#canvasDiv');
-image(img, 0,0);
+image(img, 0, 0);
   //background(200);
   textFont(myFont);
   intText();
@@ -98,9 +39,8 @@ image(img, 0,0);
   console.log(landmarks[int(random(landmarks.length))]);
   console.log(facts.length);
 
-  //button = createButton('Click to learn a fun fact!');
   button = select('#factmaker');
-  button.position(290, 500);
+  button.position(370, 685);
   button.mousePressed(buttonPressed);
   button.class('factButton');
 }
@@ -108,23 +48,40 @@ image(img, 0,0);
 function draw() {
 }
 
+function mousePressed(){
+  if (mouseX > 1 && mouseX < 800){
+    if (mouseY > -1 && mouseY < 600) {
+
+    sfrando = int(random(landmarks.length));
+    statement();
+
+    image(landmarks[sfrando], width*.13, height*0.24, 590, 430);
+
+  } else {
+
+  }
+  } else {
+
+  }
+
+}
+
 function buttonPressed(){
+  image(img, 0, 0);
   factsrando = int(random(facts.length));
   words = ' ' + facts[factsrando] + '.';
   console.log(words);
 
+  textAlign(CENTER);
+  textSize(20);
+  text('Click again see where you should visit in SF', width*0.5, height*0.1);
+
+  textAlign(CENTER);
+  textSize(25);
+  text(words, width*0.5, height*0.5);
+
+
 }
-
-
-function mousePressed() {
-  sfrando = int(random(landmarks.length));
-  statement();
-
-//image(babies[0], width/2, height/2)
-image(landmarks[sfrando], width*.33, height*0.27, 290, 230);
-}
-
-
 
 
 function intText() {
@@ -142,5 +99,5 @@ function statement() {
   textAlign(CENTER);
   textSize(25);
   text('You should go to:', width*0.5, height*0.2);
-  text(words, width*0.5, height*0.75);
+  //text(words, width*0.5, height*0.75);
 }

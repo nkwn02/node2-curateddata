@@ -1,17 +1,28 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: ;
+  padding: ;
+  background: #bd9e5b;
 }
-canvas {
+#canvasDiv {
   display: block;
+  margin:auto;
+  padding: 50px;
 }
 
 .factButton {
   padding: 30px;
   font-size: 15px;
   font-family: myFont;
+  color: white;
   background-color: #382e1d
 
+}
 
+h1 {
+  text-align:center;
+}
+
+p {
+text-align: center;
 
 }
